@@ -1,7 +1,6 @@
 package rocks.zipcode;
 
 import java.util.HashMap;
-import java.util.Stack;
 
 import static org.junit.Assert.assertEquals;
 
