@@ -88,7 +88,6 @@ public class ArrayDequeTest {
         deck.add(person4.getYearOfBirth());
         deck.add(person5.getYearOfBirth());
         deck.add(person6.getYearOfBirth());
-        deck.
         assertEquals((Integer) 1969, deck.peek());
         assertEquals((Integer)1969, deck.peekFirst());
         assertEquals((Integer)1974, deck.peekLast());
