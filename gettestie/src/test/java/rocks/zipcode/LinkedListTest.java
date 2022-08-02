@@ -16,7 +16,7 @@ public class LinkedListTest {
     }
 
     @org.junit.Test
-    public void TestLinkedListAddAndOffer() {
+    public void TestLinkedListAddPushAndOffer() {
         LinkedList<String> link = new LinkedList<>();
         Person person = new Person("Paul", 1969);
         Person person2 = new Person("Evangeline", 1979);
@@ -30,12 +30,14 @@ public class LinkedListTest {
         link.addLast(person4.getName());
         link.offerLast(person5.getName());
         link.offer(person6.getName());
-        assertEquals("Michael", link.get(0));
-        assertEquals("Evangeline", link.get(1));
-        assertEquals("Paul", link.get(2));
-        assertEquals("Judy", link.get(3));
-        assertEquals("Corey", link.get(4));
-        assertEquals("Randall", link.get(5));
+        link.push(person.getName());
+        assertEquals("Paul", link.get(0));
+        assertEquals("Michael", link.get(1));
+        assertEquals("Evangeline", link.get(2));
+        assertEquals("Paul", link.get(3));
+        assertEquals("Judy", link.get(4));
+        assertEquals("Corey", link.get(5));
+        assertEquals("Randall", link.get(6));
     }
 
     @org.junit.Test
@@ -58,7 +60,7 @@ public class LinkedListTest {
     }
 
     @org.junit.Test
-    public void TestLinkedListElementPollAndPeek() {
+    public void TestLinkedListElementGetAndPeek() {
         LinkedList<String> link = new LinkedList<>();
         Person person = new Person("Paul", 1969);
         Person person2 = new Person("Evangeline", 1979);
@@ -72,19 +74,15 @@ public class LinkedListTest {
         link.add(person4.getName());
         link.add(person5.getName());
         link.add(person6.getName());
-        link.element();
-        link.poll();
-        link.pop();
-        link.pollFirst();
-        link.pollLast();
-        assertEquals("Judy", link.get(0));
-        assertEquals("Judy", link.peek());
-        assertEquals("Judy", link.peekFirst());
-        assertEquals("Corey", link.peekLast());
+        assertEquals("Paul", link.get(0));
+        assertEquals("Paul", link.peek());
+        assertEquals("Paul", link.peekFirst());
+        assertEquals("Randall", link.peekLast());
+        assertEquals("Paul", link.element());
     }
 
     @org.junit.Test
-    public void TestLinkedList() {
+    public void TestLinkedListRemovePopAndPoll() {
         LinkedList<String> link = new LinkedList<>();
         Person person = new Person("Paul", 1969);
         Person person2 = new Person("Evangeline", 1979);
@@ -98,15 +96,13 @@ public class LinkedListTest {
         link.add(person4.getName());
         link.add(person5.getName());
         link.add(person6.getName());
-        link.element();
-        link.poll();
-        link.pop();
-        link.pollFirst();
-        link.pollLast();
-        assertEquals("Judy", link.get(0));
-        assertEquals("Judy", link.peek());
-        assertEquals("Judy", link.peekFirst());
-        assertEquals("Corey", link.peekLast());
+        assertEquals("Paul", link.get(0));
+        assertEquals("Paul", link.peek());
+        assertEquals("Paul", link.peekFirst());
+        assertEquals("Randall", link.peekLast());
+        assertEquals("Paul", link.element());
+
+
     }
 
     @org.junit.Test
@@ -125,6 +121,7 @@ public class LinkedListTest {
         link.add(person5.getName());
         link.add(person6.getName());
         link.clear();
-        assertEquals(0, link.isEmpty());
+        assertEquals(true, link.isEmpty());
+        }
     }
-}
+
