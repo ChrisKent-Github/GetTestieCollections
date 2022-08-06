@@ -33,7 +33,7 @@ public class ArrayListTest {
     }
 
     @org.junit.Test
-    public void TestArraySize() {
+    public void TestArrayListSize() {
         ArrayList<String> list = new ArrayList<>();
         Person person = new Person("Samuel", 1948);
         list.add(person.getName());

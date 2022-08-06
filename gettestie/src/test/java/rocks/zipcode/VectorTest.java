@@ -85,7 +85,7 @@ public class VectorTest {
     }
 
     @org.junit.Test
-    public void TestArrayListSublist() {
+    public void TestVectorListSublist() {
         Vector<String> vec = new Vector<>();
         Person person = new Person("Chris", 1979);
         Person person2 = new Person("Zoe", 1978);

@@ -48,7 +48,7 @@ public class TreeSetTest {
     }
 
     @org.junit.Test
-    public void TestHashSetClear() {
+    public void TestTreeSetClear() {
         TreeSet set = new TreeSet<>();
         Person person = new Person("Chris", 1979);
         Person person2 = new Person("Zoe", 1978);
